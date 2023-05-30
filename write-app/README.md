@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.salaboy.dapr.java-app' is invalid and this project uses 'com.salaboy.dapr.javaapp' instead.
+* The original package name 'com.salaboy.dapr.java-app' is invalid and this project uses 'com.salaboy.dapr.write' instead.
 
 # Getting Started
 

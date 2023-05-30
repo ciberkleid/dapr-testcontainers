@@ -1,4 +1,4 @@
-package com.salaboy.dapr.javaapp;
+package com.salaboy.dapr.write;
 
 import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
@@ -9,7 +9,7 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.context.ImportTestcontainers;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class JavaAppApplicationTests {
+class JavaAppApplicationOLDTests {
 
     @LocalServerPort
     private int localPort;
