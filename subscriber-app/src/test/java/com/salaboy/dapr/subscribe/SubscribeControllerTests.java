@@ -1,10 +1,10 @@
-package com.salaboy.dapr.javaapp;
+package com.salaboy.dapr.subscribe;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JavaAppApplicationTests {
+class SubscribeControllerTests {
 
 	@Test
 	void contextLoads() {
