@@ -1,4 +1,4 @@
-package com.salaboy.dapr.javaapp;
+package com.salaboy.dapr.write;
 
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;

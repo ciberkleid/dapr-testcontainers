@@ -9,14 +9,10 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.context.ImportTestcontainers;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class JavaAppApplicationOLDTests {
+class WriteControllerTests {
 
     @LocalServerPort
     private int localPort;
-
-    @Test
-    void contextLoads() {
-    }
 
     @Test
     void canPostToEndpoint() {

@@ -1,20 +1,20 @@
-# Read Me First
-The following was discovered as part of building this project:
+# Basic Dapr Write Application
 
-* The original package name 'com.salaboy.dapr.java-app' is invalid and this project uses 'com.salaboy.dapr.write' instead.
+This project contains a web service that will write messages to a statestore and also publish them to a pub-sub bus.
 
-# Getting Started
+Start the application by running:
+```shell
+mvn clean spring-boot:test-run
+```
 
-### Reference Documentation
-For further reference, please consider the following sections:
+This will start a set of containers on the local Docker daemon.
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.0.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.0.3/maven-plugin/reference/html/#build-image)
-* [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/3.0.3/reference/htmlsingle/#actuator)
+Send HTTP requests to the application using:
+```shell
+curl -X POST "http://localhost:8081?message=some-value"
+```
 
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service with Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/)
-
+It will respond with a JSON representation of all the values in the statestora, as the following listing shows:
+```json
+{"values":["some-value"]}
+```
