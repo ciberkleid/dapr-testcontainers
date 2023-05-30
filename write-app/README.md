@@ -7,14 +7,14 @@ Start the application by running:
 mvn clean spring-boot:test-run
 ```
 
-This will start a set of containers on the local Docker daemon.
+This will start (or re-use) a set of containers on the local Docker daemon.
 
 Send HTTP requests to the application using:
 ```shell
 curl -X POST "http://localhost:8081?message=some-value"
 ```
 
-It will respond with a JSON representation of all the values in the statestora, as the following listing shows:
+It will respond with a JSON representation of all the values in the statestore, as the following listing shows:
 ```json
 {"values":["some-value"]}
 ```

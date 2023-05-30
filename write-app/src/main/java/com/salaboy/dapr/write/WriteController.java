@@ -4,6 +4,8 @@ import io.dapr.client.DaprClient;
 import io.dapr.client.DaprClientBuilder;
 import io.dapr.client.domain.State;
 import jakarta.annotation.PostConstruct;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +16,8 @@ import java.util.ArrayList;
 
 @RestController
 public class WriteController {
+
+    private static final Logger log = LoggerFactory.getLogger(WriteController.class);
 
     @Value("${STATE_STORE_NAME:statestore}")
     private String STATE_STORE_NAME = "";
@@ -37,10 +41,10 @@ public class WriteController {
         } else {
             valuesList.values().add(message);
         }
-        System.out.println("Storing message: " + message);
+        log.info("Storing message: {}", message);
         client.saveState(STATE_STORE_NAME, "values", valuesList).block();
 
-        System.out.println("Publishing Event ( to "+PUB_SUB_NAME+" / "+ PUB_SUB_TOPIC +" ) with message: " + message);
+        log.info("Publishing Event ( to {}} / {}} ) with message: {}", PUB_SUB_NAME, PUB_SUB_TOPIC, message);
         client.publishEvent(PUB_SUB_NAME, PUB_SUB_TOPIC, message).block();
 
         return valuesList;
