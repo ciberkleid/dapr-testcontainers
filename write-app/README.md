@@ -4,7 +4,7 @@ This project contains a web service that will write messages to a statestore and
 
 Start the application by running:
 ```shell
-mvn clean spring-boot:test-run
+./mvnw clean spring-boot:test-run
 ```
 
 This will start (or re-use) a set of containers on the local Docker daemon.

@@ -6,7 +6,7 @@ This project assumes there are message in the pub-sub bus. You can use the Basic
 
 Start the application by running:
 ```shell
-mvn clean spring-boot:test-run
+./mvnw clean spring-boot:test-run
 ```
 
 This will start (or re-use) a set of containers on the local Docker daemon.
