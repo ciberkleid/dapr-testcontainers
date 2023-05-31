@@ -1,10 +1,10 @@
-package com.salaboy.dapr.javaapp;
+package com.salaboy.dapr.read;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JavaAppApplicationTests {
+class ReadControllerTests {
 
 	@Test
 	void contextLoads() {
