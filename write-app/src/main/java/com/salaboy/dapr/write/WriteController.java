@@ -44,7 +44,7 @@ public class WriteController {
         log.info("Storing message: {}", message);
         client.saveState(STATE_STORE_NAME, "values", valuesList).block();
 
-        log.info("Publishing Event ( to {}} / {}} ) with message: {}", PUB_SUB_NAME, PUB_SUB_TOPIC, message);
+        log.info("Publishing event ( to {} / {} ) with message: {}", PUB_SUB_NAME, PUB_SUB_TOPIC, message);
         client.publishEvent(PUB_SUB_NAME, PUB_SUB_TOPIC, message).block();
 
         return valuesList;

@@ -19,7 +19,7 @@ public class SubscribeController {
 
     @PostMapping("/notifications")
     public void receiveNotifications(@RequestBody Notification notification ) {
-        log.info("Message Received: {}", notification.data());
+        log.info("Message received: {}", notification.data());
         notifications.add(notification.data());
     }
 
